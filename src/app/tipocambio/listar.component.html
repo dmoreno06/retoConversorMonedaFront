@@ -1,0 +1,17 @@
+<h1 class="text-center text-info">Listado de tipo Campo</h1>
+<table class="table">
+    <thead class="table-primary">
+        <tr>
+            <th scope="col" class="text-primary">MonedaOrigen</th>
+            <th scope="col" class="text-primary">MonedaDestino</th>
+            <th scope="col" class="text-primary">MactorConversion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tipocambio of listTipocambioresponse">
+            <td>{{tipocambio.monedaOrigen}}</td>
+            <td>{{tipocambio.monedaDestino}}</td>
+            <td>{{tipocambio.factorConversion}}</td>
+          </tr>
+        </tbody>
+  </table>

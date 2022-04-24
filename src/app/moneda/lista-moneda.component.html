@@ -1,0 +1,23 @@
+<h1 class="text-center text-info">Listado de monedas</h1>
+<table class="table">
+    <thead class="table-primary">
+        <tr>
+            <th scope="col" class="text-primary">Id</th>
+            <th scope="col" class="text-primary">Codigo</th>
+            <th scope="col" class="text-primary">Descripcion</th>
+            <th scope="col">Ver</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Borrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let moneda of monedas">
+            <td>{{moneda.idMoneda}}</td>
+            <td>{{moneda.codigo}}</td>
+            <td>{{moneda.descripcion}}</td>
+            <td><button class="btn btn-outline-primary" routerLink="/detalle/{{moneda.codigo}}"><i class="far fa-eye"></i> Ver</button></td>
+            <td><button class="btn btn-outline-warning" routerLink="/editar/{{moneda.idMoneda}}"><i class="far fa-edit"></i> Editar</button></td>
+            <!-- <td><button class="btn btn-outline-danger" (click)="borrar(moneda.idMoneda)"><i class="far fa-trash-alt"></i> Eliminar</button></td> -->
+          </tr>
+        </tbody>
+  </table>

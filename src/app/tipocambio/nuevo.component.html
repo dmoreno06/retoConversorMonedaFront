@@ -1,0 +1,42 @@
+<p>nuevo-tipo-cambio works!</p>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onNuevo()" novalidate #f="ngForm">               
+                <div class="form-group">
+                    <label for="monedaOrigen">Moneda Origen</label>
+                    <input type="text" class="form-control" id="monedaOrigen" name="monedaOrigen"
+                    [(ngModel)]="monedaOrigen" required>
+                </div>
+                <div class="form-group">
+                    <label for="monedaDestino">Moneda Destino</label>
+                    <input type="text" class="form-control" id="monedaDestino" name="monedaDestino"
+                    [(ngModel)]="monedaDestino" required>
+                </div>
+                <div class="form-group">
+                    <label for="factorConversion">Factor de Conversion</label>
+                    <input type="number" class="form-control" id="factorConversion" name="factorConversion"
+                    [(ngModel)]="factorConversion" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipoModificacion"> Tipo Modificacion </label>
+                    <input type="text" class="form-control" id="tipoModificacion" name="tipoModificacion" value="Crear tipo cambio"
+                    [(ngModel)]="tipoModificacion" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombreUsuario">Nombre Usuario</label>
+                    <input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario" value="Diana Marcela"
+                    [(ngModel)]="nombreUsuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaRegistro">fechaRegistro</label>
+                    <input type="text" class="form-control" id="fechaRegistro" name="fechaRegistro" dvalue="23/04/2022"
+                [(ngModel)]="fechaRegistro" required>
+                </div>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear</button>
+            </form>
+        </div>
+
+    </div>
+</div>
